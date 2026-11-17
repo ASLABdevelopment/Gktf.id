@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gktf.id — Semua Tools Digital dalam Satu Tempat</title>
+  <meta name="description" content="Download video TikTok tanpa watermark, YouTube, Facebook, Instagram, konversi MP3, bypass shortlink, dan hapus background foto gratis di gktf.id." />
+
+  <!-- Google Fonts: Space Grotesk (Display) & Plus Jakarta Sans (Body/UI) & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#F6F4EF',
+            surface: '#ECE9E2',
+            obsidian: '#121212',
+            ember: '#FF5500',
+            emberLight: '#FF7A33',
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', '"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          boxShadow: {
+            studio: '0 24px 60px -15px rgba(18, 18, 18, 0.08)',
+            ember: '0 14px 34px -8px rgba(255, 85, 0, 0.42)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Base Editorial Styling */
+    body {
+      background-color: #F6F4EF;
+      color: #121212;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .font-editorial {
+      font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+      letter-spacing: -0.04em;
+    }
+
+    /* Transparent Checkerboard Pattern for Remove BG Preview */
+    .checkerboard {
+      background-color: #ffffff;
+      background-image:
+        linear-gradient(45deg, #e5e2dc 25%, transparent 25%),
+        linear-gradient(-45deg, #e5e2dc 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #e5e2dc 75%),
+        linear-gradient(-45deg, transparent 75%, #e5e2dc 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    }
+
+    /* Custom Range Slider */
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 6px;
+      border-radius: 999px;
+      background: #DCD8CE;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #FF5500;
+      margin-top: -6px;
+      box-shadow: 0 2px 8px rgba(255, 85, 0, 0.45);
+      transition: transform 0.15s ease;
+    }
+    input[type="range"]::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+    }
+
+    /* Subtle Floating & Light-Trail Animations */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.75; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.03); }
+    }
+    .animate-glow {
+      animation: pulseGlow 5s ease-in-out infinite;
+    }
+
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .animate-spin-slow {
+      animation: spinSlow 24s linear infinite;
+    }
+
+    /* Feature Card Hover & Active State */
+    .tool-selector-card {
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .tool-selector-card:hover {
+      transform: translateY(-6px);
+    }
+    .tool-selector-card.active-card {
+      background-color: #121212 !important;
+      color: #F6F4EF !important;
+      box-shadow: 0 24px 50px -12px rgba(18, 18, 18, 0.28);
+    }
+    .tool-selector-card.active-card .card-desc {
+      color: #A8A39B !important;
+    }
+    .tool-selector-card.active-card .card-arrow {
+      background-color: #FF5500 !important;
+      color: #FFFFFF !important;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-ember selection:text-white relative">
+
+  <!-- Decorative Organic Flowing SVG Background Lines (Editorial Studio Aesthetic) -->
+  <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
+    <svg class="w-full h-full opacity-55" viewBox="0 0 1440 2400" fill="none" preserveAspectRatio="none">
+      <path d="M-120 260 C 320 180, 560 540, 1080 410 C 1320 350, 1480 470, 1560 520" stroke="#DDD8CE" stroke-width="1.2" />
+      <path d="M-80 960 C 380 1120, 790 830, 1520 990" stroke="#DDD8CE" stroke-width="1.2" />
+      <path d="M-100 1740 C 440 1620, 920 1980, 1540 1810" stroke="#DDD8CE" stroke-width="1.2" />
+      <circle cx="1160" cy="310" r="240" stroke="#E2DDD3" stroke-width="1" />
+    </svg>
+  </div>
+
+  <!-- =========================================================
+       1. TOP NAVBAR
+  ========================================================== -->
+  <header class="sticky top-0 z-40 bg-canvas/85 backdrop-blur-md border-b border-black/[0.06]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Monogram Logo -->
+      <a href="#beranda" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-10 h-10 rounded-xl bg-obsidian flex items-center justify-center relative overflow-hidden shadow-sm group-hover:scale-105 transition-transform">
+          <!-- Custom Geometric Monogram SVG -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 6H12V9H7V15H10V12H13V18H4V6Z" fill="#F6F4EF"/>
+            <path d="M14 6H17V11L20.5 6H23.5L19.5 11.8L23.8 18H20.5L17 12.8V18H14V6Z" fill="#FF5500"/>
+          </svg>
+        </div>
+        <div class="flex items-baseline">
+          <span class="font-editorial font-bold text-xl tracking-tight text-obsidian">gktf</span>
+          <span class="font-editorial font-bold text-xl text-ember">.id</span>
+        </div>
+      </a>
+
+      <!-- Desktop Center Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-obsidian/75">
+        <a href="#beranda" class="hover:text-ember transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-ember after:rounded-full">Beranda</a>
+        <button type="button" onclick="selectWorkspaceTab('downloader', true)" class="hover:text-ember transition-colors">Downloader</button>
+        <button type="button" onclick="selectWorkspaceTab('bypass', true)" class="hover:text-ember transition-colors">Bypass Link</button>
+        <button type="button" onclick="selectWorkspaceTab('removebg', true)" class="hover:text-ember transition-colors">Remove BG</button>
+        <button type="button" onclick="selectWorkspaceTab('other', true)" class="hover:text-ember transition-colors">Tools Lain</button>
+        <button type="button" onclick="toggleApiModal(true)" class="hover:text-ember transition-colors">Info API</button>
+      </nav>
+
+      <!-- Right Action CTA + Mobile Menu Toggle -->
+      <div class="flex items-center gap-3">
+        <a href="#workspace" class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-obsidian/20 bg-white/70 hover:bg-obsidian hover:text-white hover:border-obsidian text-sm font-semibold text-obsidian transition-all duration-200">
+          <span>Coba Gratis</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <button type="button" id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Buka Menu" class="md:hidden p-2.5 rounded-full border border-obsidian/15 bg-white/80 text-obsidian hover:bg-obsidian hover:text-white transition-colors">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-black/5 bg-canvas px-4 py-4 space-y-2 shadow-lg">
+      <a href="#beranda" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-semibold text-obsidian hover:bg-surface">Beranda</a>
+      <button type="button" onclick="selectWorkspaceTab('downloader', true); toggleMobileMenu();" class="w-full text-left px-4 py-2.5 rounded-xl font-medium text-obsidian/80 hover:bg-surface">Video & MP3 Downloader</button>
+      <button type="button" onclick="selectWorkspaceTab('bypass', true); toggleMobileMenu();" class="w-full text-left px-4 py-2.5 rounded-xl font-medium text-obsidian/80 hover:bg-surface">Bypass & Unshorten Link</button>
+      <button type="button" onclick="selectWorkspaceTab('removebg', true); toggleMobileMenu();" class="w-full text-left px-4 py-2.5 rounded-xl font-medium text-obsidian/80 hover:bg-surface">AI Remove Background</button>
+      <button type="button" onclick="selectWorkspaceTab('other', true); toggleMobileMenu();" class="w-full text-left px-4 py-2.5 rounded-xl font-medium text-obsidian/80 hover:bg-surface">QR Code & Kompres Foto</button>
+      <button type="button" onclick="toggleApiModal(true); toggleMobileMenu();" class="w-full text-left px-4 py-2.5 rounded-xl font-semibold text-ember hover:bg-ember/10">Info Endpoint API Gratis</button>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+
+    <!-- =========================================================
+         2. HERO SECTION (Asymmetric 2-Column Editorial)
+    ========================================================== -->
+    <section id="beranda" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 lg:pt-16 lg:pb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+
+        <!-- Left Editorial Column -->
+        <div class="lg:col-span-7 space-y-6">
+          <!-- Eyebrow Tag -->
+          <div class="inline-flex items-center gap-3">
+            <span class="w-8 h-[2px] bg-ember rounded-full"></span>
+            <span class="text-xs font-bold tracking-[0.2em] uppercase text-obsidian/70">ALL-IN-ONE WEB UTILITY</span>
+          </div>
+
+          <!-- Massive Tight-Tracking Headline -->
+          <h1 class="font-editorial font-bold text-5xl sm:text-7xl xl:text-[84px] leading-[0.94] uppercase text-obsidian">
+            SEMUA<br />
+            TOOLS<br />
+            <span class="text-ember">DIGITAL</span><span class="text-obsidian">.</span>
+          </h1>
+
+          <!-- Concise Indonesian Subtitle -->
+          <p class="text-base sm:text-lg text-obsidian/70 max-w-xl leading-relaxed font-normal">
+            Satu platform serba bisa untuk unduh video <strong class="text-obsidian font-semibold">TikTok tanpa watermark, YouTube, Facebook, Instagram</strong>, ekstrak audio MP3, bypass shortlink, hingga hapus background foto berbasis AI — <span class="text-obsidian font-semibold underline decoration-ember decoration-2 underline-offset-4">100% gratis tanpa langganan.</span>
+          </p>
+
+          <!-- Hero Action Buttons -->
+          <div class="pt-2 flex flex-wrap items-center gap-4">
+            <a href="#workspace" class="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-ember hover:bg-[#e04b00] text-white font-semibold text-sm sm:text-base shadow-ember transition-all duration-200 hover:-translate-y-0.5">
+              <span>Mulai Gunakan</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+
+            <button type="button" onclick="toggleApiModal(true)" class="group inline-flex items-center gap-3 pr-5 pl-2 py-2 rounded-full bg-white/80 hover:bg-white border border-obsidian/15 text-obsidian font-semibold text-sm sm:text-base transition-all duration-200">
+              <span class="w-10 h-10 rounded-full border border-obsidian/20 group-hover:border-ember group-hover:bg-ember group-hover:text-white flex items-center justify-center transition-colors">
+                <i data-lucide="terminal" class="w-4 h-4"></i>
+              </span>
+              <span>Lihat Daftar API</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Obsidian Glassmorphic Showcase Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-[32px] bg-obsidian text-white p-7 sm:p-9 overflow-hidden shadow-2xl border border-white/10">
+            <!-- Dynamic Glowing Orange Light-Trail SVG Artwork -->
+            <div class="pointer-events-none absolute inset-0 overflow-hidden">
+              <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-ember/30 blur-3xl animate-glow"></div>
+              <div class="absolute -bottom-20 -left-16 w-72 h-72 rounded-full bg-ember/25 blur-3xl"></div>
+              <svg class="w-full h-full opacity-90" viewBox="0 0 420 420" fill="none">
+                <defs>
+                  <linearGradient id="fireTrail" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#FF5500" stop-opacity="0.05" />
+                    <stop offset="50%" stop-color="#FF5500" stop-opacity="0.95" />
+                    <stop offset="100%" stop-color="#FFB27D" stop-opacity="0.9" />
+                  </linearGradient>
+                  <filter id="neonBlur" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="6" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+                <!-- Glowing Orbital Arcs -->
+                <path d="M -30 290 C 90 360, 290 320, 390 150 C 430 80, 350 20, 250 70" stroke="url(#fireTrail)" stroke-width="5" stroke-linecap="round" filter="url(#neonBlur)" />
+                <path d="M 30 350 C 170 370, 350 250, 410 110" stroke="url(#fireTrail)" stroke-width="2.5" stroke-linecap="round" />
+                <ellipse cx="220" cy="210" rx="155" ry="62" transform="rotate(-24 220 210)" stroke="url(#fireTrail)" stroke-width="2" opacity="0.7" />
+              </svg>
+            </div>
+
+            <!-- Showcase Header -->
+            <div class="relative z-10 flex items-center justify-between mb-8">
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-xs font-medium text-white/90">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span>API Publik Aktif</span>
+              </div>
+              <span class="font-mono text-xs text-white/50">01 / 04</span>
+            </div>
+
+            <!-- Central Interactive Quick-Launch Stack -->
+            <div class="relative z-10 space-y-3 my-4">
+              <button type="button" onclick="selectWorkspaceTab('downloader', true)" class="w-full text-left p-4 rounded-2xl bg-white/[0.07] hover:bg-white/[0.14] backdrop-blur-md border border-white/10 transition-all flex items-center justify-between group">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-ember flex items-center justify-center text-white shadow-ember">
+                    <i data-lucide="download-cloud" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-sm text-white">Video & MP3 Downloader</div>
+                    <div class="text-xs text-white/60">TikTok No-WM • YouTube • FB • IG</div>
+                  </div>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-white/50 group-hover:text-ember group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+              </button>
+
+              <button type="button" onclick="selectWorkspaceTab('bypass', true)" class="w-full text-left p-4 rounded-2xl bg-white/[0.07] hover:bg-white/[0.14] backdrop-blur-md border border-white/10 transition-all flex items-center justify-between group">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-ember">
+                    <i data-lucide="link-2-off" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-sm text-white">Bypass & Unshorten Link</div>
+                    <div class="text-xs text-white/60">bit.ly • s.id • tinyurl • Safelink</div>
+                  </div>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-white/50 group-hover:text-ember group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+              </button>
+
+              <button type="button" onclick="selectWorkspaceTab('removebg', true)" class="w-full text-left p-4 rounded-2xl bg-white/[0.07] hover:bg-white/[0.14] backdrop-blur-md border border-white/10 transition-all flex items-center justify-between group">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-ember">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-sm text-white">AI Remove Background</div>
+                    <div class="text-xs text-white/60">Otomatis di Browser • PNG HD</div>
+                  </div>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-white/50 group-hover:text-ember group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+              </button>
+            </div>
+
+            <!-- Bottom Status Footer -->
+            <div class="relative z-10 pt-5 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-white/60">
+              <span>Tanpa Login • Tanpa Batas</span>
+              <span class="font-mono text-ember font-semibold">gktf.id v2.6</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. INTERACTIVE MULTI-TOOL WORKSPACE
+    ========================================================== -->
+    <section id="workspace" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <!-- Section Heading (Editorial Left Alignment) -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <div class="inline-flex items-center gap-3 mb-3">
+            <span class="w-8 h-[2px] bg-ember rounded-full"></span>
+            <span class="text-xs font-bold tracking-[0.2em] uppercase text-obsidian/65">PILIH FITUR UTILITY</span>
+          </div>
+          <h2 class="font-editorial font-bold text-3xl sm:text-5xl text-obsidian leading-[1.06]">
+            Dari Link ke File — <span class="text-ember">Semua Bisa.</span>
+          </h2>
+        </div>
+        <p class="text-sm text-obsidian/65 max-w-md">
+          Klik salah satu kartu layanan di bawah untuk membuka panel kerja interaktif secara instan.
+        </p>
+      </div>
+
+      <!-- 4 Feature Selector Cards (Styled after Studio Service Cards) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+        <!-- Card 1: Downloader -->
+        <button type="button" id="card-downloader" onclick="selectWorkspaceTab('downloader', false)" class="tool-selector-card active-card text-left rounded-3xl bg-surface p-6 relative overflow-hidden border border-black/5 flex flex-col justify-between min-h-[225px] group">
+          <div class="relative z-10">
+            <div class="w-10 h-10 rounded-full bg-obsidian text-white flex items-center justify-center mb-4">
+              <i data-lucide="video" class="w-4 h-4"></i>
+            </div>
+            <h3 class="font-editorial font-bold text-xl leading-snug mb-1.5">Video & MP3<br/>Downloader</h3>
+            <p class="card-desc text-xs text-obsidian/65 leading-relaxed">Unduh TT tanpa watermark, YT, FB, IG & ekstrak MP3.</p>
+          </div>
+          <div class="relative z-10 flex items-center justify-between pt-6">
+            <span class="font-mono text-[11px] uppercase tracking-wider opacity-70">TT • YT • FB • IG</span>
+            <span class="card-arrow w-9 h-9 rounded-full bg-obsidian text-white flex items-center justify-center transition-colors">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </span>
+          </div>
+          <!-- Abstract Dark Glowing Orb Accent -->
+          <div class="pointer-events-none absolute -bottom-10 -right-10 w-36 h-36 rounded-full bg-gradient-to-tr from-ember/50 via-ember/20 to-transparent blur-xl"></div>
+        </button>
+
+        <!-- Card 2: Bypass Link -->
+        <button type="button" id="card-bypass" onclick="selectWorkspaceTab('bypass', false)" class="tool-selector-card text-left rounded-3xl bg-surface p-6 relative overflow-hidden border border-black/5 flex flex-col justify-between min-h-[225px] group">
+          <div class="relative z-10">
+            <div class="w-10 h-10 rounded-full bg-obsidian text-white flex items-center justify-center mb-4">
+              <i data-lucide="shield-check" class="w-4 h-4"></i>
+            </div>
+            <h3 class="font-editorial font-bold text-xl leading-snug mb-1.5">Bypass &<br/>Unshorten Link</h3>
+            <p class="card-desc text-xs text-obsidian/65 leading-relaxed">Buka tujuan asli shortlink & safelink dengan aman.</p>
+          </div>
+          <div class="relative z-10 flex items-center justify-between pt-6">
+            <span class="font-mono text-[11px] uppercase tracking-wider opacity-70">UNSHORTEN API</span>
+            <span class="card-arrow w-9 h-9 rounded-full bg-obsidian text-white flex items-center justify-center transition-colors">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </span>
+          </div>
+          <div class="pointer-events-none absolute -bottom-10 -right-10 w-36 h-36 rounded-full bg-gradient-to-tr from-obsidian/20 via-ember/20 to-transparent blur-xl"></div>
+        </button>
+
+        <!-- Card 3: Remove BG -->
+        <button type="button" id="card-removebg" onclick="selectWorkspaceTab('removebg', false)" class="tool-selector-card text-left rounded-3xl bg-surface p-6 relative overflow-hidden border border-black/5 flex flex-col justify-between min-h-[225px] group">
+          <div class="relative z-10">
+            <div class="w-10 h-10 rounded-full bg-obsidian text-white flex items-center justify-center mb-4">
+              <i data-lucide="wand-2" class="w-4 h-4"></i>
+            </div>
+            <h3 class="font-editorial font-bold text-xl leading-snug mb-1.5">AI Remove<br/>Background</h3>
+            <p class="card-desc text-xs text-obsidian/65 leading-relaxed">Hapus latar belakang foto otomatis langsung di browser.</p>
+          </div>
+          <div class="relative z-10 flex items-center justify-between pt-6">
+            <span class="font-mono text-[11px] uppercase tracking-wider opacity-70">CLIENT AI WASM</span>
+            <span class="card-arrow w-9 h-9 rounded-full bg-obsidian text-white flex items-center justify-center transition-colors">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </span>
+          </div>
+          <div class="pointer-events-none absolute -bottom-10 -right-10 w-36 h-36 rounded-full bg-gradient-to-tr from-ember/35 via-obsidian/15 to-transparent blur-xl"></div>
+        </button>
+
+        <!-- Card 4: Tools Lainnya -->
+        <button type="button" id="card-other" onclick="selectWorkspaceTab('other', false)" class="tool-selector-card text-left rounded-3xl bg-surface p-6 relative overflow-hidden border border-black/5 flex flex-col justify-between min-h-[225px] group">
+          <div class="relative z-10">
+            <div class="w-10 h-10 rounded-full bg-obsidian text-white flex items-center justify-center mb-4">
+              <i data-lucide="qr-code" class="w-4 h-4"></i>
+            </div>
+            <h3 class="font-editorial font-bold text-xl leading-snug mb-1.5">Tools Lainnya<br/>(QR & Kompres)</h3>
+            <p class="card-desc text-xs text-obsidian/65 leading-relaxed">Buat QR Code HD & perkecil ukuran file gambar instan.</p>
+          </div>
+          <div class="relative z-10 flex items-center justify-between pt-6">
+            <span class="font-mono text-[11px] uppercase tracking-wider opacity-70">QR • COMPRESS</span>
+            <span class="card-arrow w-9 h-9 rounded-full bg-obsidian text-white flex items-center justify-center transition-colors">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </span>
+          </div>
+          <div class="pointer-events-none absolute -bottom-10 -right-10 w-36 h-36 rounded-full bg-gradient-to-tr from-obsidian/25 via-ember/20 to-transparent blur-xl"></div>
+        </button>
+      </div>
+
+      <!-- =======================================================
+           ACTIVE WORKSPACE CONTAINER
+      ======================================================== -->
+      <div class="rounded-[32px] bg-white border border-black/[0.07] shadow-studio p-6 sm:p-10 transition-all">
+
+        <!-- -------------------------------------------------------
+             TAB 1: VIDEO & MP3 DOWNLOADER
+        -------------------------------------------------------- -->
+        <div id="panel-downloader" class="workspace-panel space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-4 border-b border-black/5 pb-5">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-ember">01 • MEDIA EXTRACTOR</span>
+              <h3 class="font-editorial font-bold text-2xl sm:text-3xl text-obsidian mt-1">Video & MP3 Downloader</h3>
+            </div>
+            <!-- Auto-detected Platform Badge -->
+            <div id="platformBadge" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface text-xs font-bold text-obsidian">
+              <i data-lucide="globe" class="w-3.5 h-3.5 text-ember"></i>
+              <span>Auto-Deteksi: TT / YT / FB / IG</span>
+            </div>
+          </div>
+
+          <!-- Input Box & Quick Action Buttons -->
+          <div class="space-y-4">
+            <div class="flex flex-col md:flex-row gap-3">
+              <div class="relative flex-1">
+                <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-obsidian/40">
+                  <i data-lucide="link" class="w-5 h-5"></i>
+                </div>
+                <input
+                  type="url"
+                  id="mediaUrlInput"
+                  oninput="detectMediaPlatform(this.value)"
+                  placeholder="Tempel tautan TikTok, YouTube, Facebook, atau Instagram di sini..."
+                  class="w-full pl-12 pr-28 py-4 rounded-2xl bg-canvas border border-black/10 focus:border-ember focus:ring-2 focus:ring-ember/20 outline-none text-sm sm:text-base text-obsidian placeholder:text-obsidian/40 transition-all"
+                />
+                <button
+                  type="button"
+                  onclick="pasteFromClipboard('mediaUrlInput', () => detectMediaPlatform(document.getElementById('mediaUrlInput').value))"
+                  class="absolute right-2.5 top-1/2 -translate-y-1/2 px-3.5 py-2 rounded-xl bg-white hover:bg-obsidian hover:text-white border border-black/10 text-xs font-semibold text-obsidian transition-colors inline-flex items-center gap-1.5"
+                >
+                  <i data-lucide="clipboard-paste" class="w-3.5 h-3.5"></i>
+                  <span>Tempel</span>
+                </button>
+              </div>
+
+              <button
+                type="button"
+                id="btnDownloadMedia"
+                onclick="handleMediaDownload()"
+                class="px-8 py-4 rounded-2xl bg-ember hover:bg-[#e04b00] text-white font-bold text-sm sm:text-base shadow-ember transition-all inline-flex items-center justify-center gap-2.5 shrink-0"
+              >
+                <i data-lucide="download" class="w-5 h-5"></i>
+                <span>Proses Link</span>
+              </button>
+            </div>
+
+            <!-- Format Toggle & Sample Link Helper -->
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <div class="inline-flex p-1.5 rounded-full bg-canvas border border-black/5">
+                <button type="button" id="fmt-mp4" onclick="setMediaFormat('mp4')" class="px-4 py-2 rounded-full bg-obsidian text-white text-xs font-bold transition-all inline-flex items-center gap-1.5">
+                  <i data-lucide="film" class="w-3.5 h-3.5"></i>
+                  <span>Video MP4 (HD / No WM)</span>
+                </button>
+                <button type="button" id="fmt-mp3" onclick="setMediaFormat('mp3')" class="px-4 py-2 rounded-full text-obsidian/70 hover:text-obsidian text-xs font-bold transition-all inline-flex items-center gap-1.5">
+                  <i data-lucide="music" class="w-3.5 h-3.5"></i>
+                  <span>Audio MP3</span>
+                </button>
+              </div>
+
+              <div class="flex items-center gap-2 text-xs text-obsidian/60">
+                <span>Coba contoh:</span>
+                <button type="button" onclick="fillSampleMedia('tiktok')" class="px-2.5 py-1 rounded-lg bg-surface hover:bg-ember hover:text-white font-semibold transition-colors">TikTok</button>
+                <button type="button" onclick="fillSampleMedia('youtube')" class="px-2.5 py-1 rounded-lg bg-surface hover:bg-ember hover:text-white font-semibold transition-colors">YouTube</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Result Container -->
+          <div id="mediaResultArea" class="hidden pt-2"></div>
+        </div>
+
+        <!-- -------------------------------------------------------
+             TAB 2: BYPASS & UNSHORTEN LINK
+        -------------------------------------------------------- -->
+        <div id="panel-bypass" class="workspace-panel hidden space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-4 border-b border-black/5 pb-5">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-ember">02 • URL EXPANDER & INSPECTOR</span>
+              <h3 class="font-editorial font-bold text-2xl sm:text-3xl text-obsidian mt-1">Bypass & Unshorten Link</h3>
+            </div>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface text-xs font-bold text-obsidian">
+              <i data-lucide="shield" class="w-3.5 h-3.5 text-emerald-600"></i>
+              <span>Deteksi Redirect & Safelink</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-3">
+            <div class="relative flex-1">
+              <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-obsidian/40">
+                <i data-lucide="unlink" class="w-5 h-5"></i>
+              </div>
+              <input
+                type="url"
+                id="bypassUrlInput"
+                placeholder="Masukkan shortlink (bit.ly, s.id, tinyurl, t.co) atau URL safelink..."
+                class="w-full pl-12 pr-28 py-4 rounded-2xl bg-canvas border border-black/10 focus:border-ember focus:ring-2 focus:ring-ember/20 outline-none text-sm sm:text-base text-obsidian placeholder:text-obsidian/40 transition-all"
+              />
+              <button
+                type="button"
+                onclick="pasteFromClipboard('bypassUrlInput')"
+                class="absolute right-2.5 top-1/2 -translate-y-1/2 px-3.5 py-2 rounded-xl bg-white hover:bg-obsidian hover:text-white border border-black/10 text-xs font-semibold text-obsidian transition-colors inline-flex items-center gap-1.5"
+              >
+                <i data-lucide="clipboard-paste" class="w-3.5 h-3.5"></i>
+                <span>Tempel</span>
+              </button>
+            </div>
+
+            <button
+              type="button"
+              id="btnBypassLink"
+              onclick="handleBypassLink()"
+              class="px-8 py-4 rounded-2xl bg-obsidian hover:bg-ember text-white font-bold text-sm sm:text-base transition-all inline-flex items-center justify-center gap-2.5 shrink-0"
+            >
+              <i data-lucide="zap" class="w-5 h-5 text-ember group-hover:text-white"></i>
+              <span>Buka Tujuan Asli</span>
+            </button>
+          </div>
+
+          <!-- Quick Test Shortlinks -->
+          <div class="flex flex-wrap items-center gap-2 text-xs text-obsidian/60">
+            <span>Contoh pengujian:</span>
+            <button type="button" onclick="fillSampleBypass('https://tinyurl.com/2p83659h')" class="px-2.5 py-1 rounded-lg bg-surface hover:bg-ember hover:text-white font-mono transition-colors">tinyurl.com/2p83659h</button>
+            <button type="button" onclick="fillSampleBypass('https://safelink.example.id/go?url=aHR0cHM6Ly9naXRodWIuY29t')" class="px-2.5 py-1 rounded-lg bg-surface hover:bg-ember hover:text-white font-mono transition-colors">Safelink Base64</button>
+          </div>
+
+          <!-- Bypass Result Container -->
+          <div id="bypassResultArea" class="hidden pt-2"></div>
+        </div>
+
+        <!-- -------------------------------------------------------
+             TAB 3: AI REMOVE BACKGROUND
+        -------------------------------------------------------- -->
+        <div id="panel-removebg" class="workspace-panel hidden space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-4 border-b border-black/5 pb-5">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-ember">03 • BROWSER NEURAL SEGMENTATION</span>
+              <h3 class="font-editorial font-bold text-2xl sm:text-3xl text-obsidian mt-1">AI Remove Background</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <button type="button" onclick="generateSampleSubjectImage()" class="px-4 py-2 rounded-full bg-surface hover:bg-obsidian hover:text-white text-xs font-bold text-obsidian transition-colors inline-flex items-center gap-1.5">
+                <i data-lucide="image-plus" class="w-3.5 h-3.5"></i>
+                <span>Pakai Gambar Sampel</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Drag & Drop Uploader -->
+          <div
+            id="bgDropZone"
+            onclick="document.getElementById('bgFileInput').click()"
+            ondragover="event.preventDefault(); this.classList.add('border-ember', 'bg-ember/5');"
+            ondragleave="this.classList.remove('border-ember', 'bg-ember/5');"
+            ondrop="handleBgDrop(event)"
+            class="cursor-pointer rounded-3xl border-2 border-dashed border-obsidian/20 hover:border-ember bg-canvas/70 hover:bg-ember/[0.03] p-8 sm:p-12 text-center transition-all"
+          >
+            <input type="file" id="bgFileInput" accept="image/png,image/jpeg,image/webp" class="hidden" onchange="handleBgFileSelect(event)" />
+            <div class="w-14 h-14 rounded-2xl bg-obsidian text-white flex items-center justify-center mx-auto mb-4 shadow-md">
+              <i data-lucide="upload-cloud" class="w-7 h-7 text-ember"></i>
+            </div>
+            <h4 class="font-editorial font-bold text-lg sm:text-xl text-obsidian">Seret & Lepas Foto atau Klik untuk Unggah</h4>
+            <p class="text-xs sm:text-sm text-obsidian/60 mt-1.5 max-w-md mx-auto">
+              Mendukung PNG, JPG, WebP. Diproses langsung oleh AI di perangkat Anda sehingga privasi foto terjaga 100% dan tanpa batas kuota.
+            </p>
+          </div>
+
+          <!-- Progress Status Bar -->
+          <div id="bgProgressBox" class="hidden rounded-2xl bg-obsidian text-white p-5 space-y-3">
+            <div class="flex items-center justify-between text-xs font-semibold">
+              <span id="bgProgressLabel" class="flex items-center gap-2">
+                <i data-lucide="loader-2" class="w-4 h-4 text-ember animate-spin"></i>
+                <span>Mempersiapkan AI Background Removal...</span>
+              </span>
+              <span id="bgProgressPercent" class="font-mono text-ember">25%</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+              <div id="bgProgressBar" class="h-full bg-ember rounded-full transition-all duration-300" style="width: 25%"></div>
+            </div>
+          </div>
+
+          <!-- Before / After Comparison Workspace -->
+          <div id="bgWorkspaceResult" class="hidden space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Original -->
+              <div class="rounded-2xl bg-canvas p-4 border border-black/5">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-bold uppercase tracking-wider text-obsidian/60">Foto Asli</span>
+                  <span id="bgOrigDims" class="font-mono text-[11px] text-obsidian/50">—</span>
+                </div>
+                <div class="aspect-square max-h-80 mx-auto rounded-xl overflow-hidden bg-white flex items-center justify-center">
+                  <img id="bgOriginalPreview" alt="Original" class="max-h-full max-w-full object-contain" />
+                </div>
+              </div>
+
+              <!-- Removed Background Result -->
+              <div class="rounded-2xl bg-canvas p-4 border border-black/5">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-bold uppercase tracking-wider text-ember">Hasil Tanpa Background</span>
+                  <span class="font-mono text-[11px] text-emerald-600 font-semibold">PNG Transparan</span>
+                </div>
+                <div id="bgOutputBackdrop" class="aspect-square max-h-80 mx-auto rounded-xl overflow-hidden checkerboard flex items-center justify-center transition-colors duration-200 border border-black/10">
+                  <img id="bgResultPreview" alt="Hasil Remove BG" class="max-h-full max-w-full object-contain" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Background Swatches & Download Bar -->
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-black/5">
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-bold text-obsidian/70">Latar Pratinjau:</span>
+                <button type="button" onclick="setBgPreviewColor('transparent')" title="Transparan" class="w-8 h-8 rounded-full checkerboard border-2 border-obsidian shadow-sm"></button>
+                <button type="button" onclick="setBgPreviewColor('#FFFFFF')" title="Putih" class="w-8 h-8 rounded-full bg-white border border-black/20 shadow-sm"></button>
+                <button type="button" onclick="setBgPreviewColor('#FF5500')" title="Vibrant Orange" class="w-8 h-8 rounded-full bg-ember border border-black/10 shadow-sm"></button>
+                <button type="button" onclick="setBgPreviewColor('#121212')" title="Obsidian Black" class="w-8 h-8 rounded-full bg-obsidian border border-black/10 shadow-sm"></button>
+              </div>
+
+              <button type="button" onclick="downloadRemovedBgImage()" class="px-6 py-3.5 rounded-full bg-ember hover:bg-[#e04b00] text-white font-bold text-sm shadow-ember transition-all inline-flex items-center gap-2">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                <span>Unduh PNG HD</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------
+             TAB 4: TOOLS LAINNYA (QR GENERATOR & IMAGE COMPRESSOR)
+        -------------------------------------------------------- -->
+        <div id="panel-other" class="workspace-panel hidden space-y-6">
+          <div class="border-b border-black/5 pb-5">
+            <span class="text-xs font-bold uppercase tracking-widest text-ember">04 • EXTRA DIGITAL UTILITIES</span>
+            <h3 class="font-editorial font-bold text-2xl sm:text-3xl text-obsidian mt-1">QR Code Generator & Kompresor Foto</h3>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Sub-tool A: QR Code Generator -->
+            <div class="rounded-3xl bg-canvas p-6 border border-black/5 flex flex-col justify-between space-y-5">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-editorial font-bold text-xl text-obsidian">QR Code Generator</h4>
+                  <span class="font-mono text-[11px] px-2.5 py-1 rounded-full bg-white text-obsidian/70">api.qrserver.com</span>
+                </div>
+
+                <div>
+                  <label for="qrTextInput" class="block text-xs font-bold text-obsidian/70 mb-1.5">Teks atau Tautan URL</label>
+                  <input
+                    type="text"
+                    id="qrTextInput"
+                    value="https://gktf.id"
+                    oninput="updateQrPreview()"
+                    placeholder="Ketik URL, WiFi, atau teks..."
+                    class="w-full px-4 py-3 rounded-xl bg-white border border-black/10 focus:border-ember outline-none text-sm text-obsidian"
+                  />
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label for="qrColorSelect" class="block text-xs font-bold text-obsidian/70 mb-1.5">Warna QR</label>
+                    <select id="qrColorSelect" onchange="updateQrPreview()" class="w-full px-3 py-2.5 rounded-xl bg-white border border-black/10 text-xs font-semibold text-obsidian outline-none">
+                      <option value="121212">Obsidian Black (#121212)</option>
+                      <option value="FF5500">Vibrant Orange (#FF5500)</option>
+                      <option value="1E3A8A">Deep Navy (#1E3A8A)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="qrSizeSelect" class="block text-xs font-bold text-obsidian/70 mb-1.5">Resolusi PNG</label>
+                    <select id="qrSizeSelect" onchange="updateQrPreview()" class="w-full px-3 py-2.5 rounded-xl bg-white border border-black/10 text-xs font-semibold text-obsidian outline-none">
+                      <option value="400x400">400 × 400 px</option>
+                      <option value="600x600">600 × 600 px</option>
+                      <option value="900x900">900 × 900 px (HD)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- QR Live Preview & Download -->
+              <div class="pt-2 flex flex-col sm:flex-row items-center gap-5 bg-white p-4 rounded-2xl border border-black/5">
+                <div class="w-32 h-32 rounded-xl bg-canvas p-2 flex items-center justify-center shrink-0">
+                  <img id="qrPreviewImg" src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&color=121212&data=https%3A%2F%2Fgktf.id" alt="QR Code Preview" class="w-full h-full object-contain rounded-lg" />
+                </div>
+                <div class="space-y-3 text-center sm:text-left flex-1">
+                  <p class="text-xs text-obsidian/65 leading-relaxed">QR Code tajam siap cetak untuk kartu nama, kemasan produk, atau tautan cepat.</p>
+                  <button type="button" onclick="downloadQrPng()" class="w-full sm:w-auto px-5 py-2.5 rounded-full bg-obsidian hover:bg-ember text-white text-xs font-bold transition-colors inline-flex items-center justify-center gap-2">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                    <span>Unduh QR PNG</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sub-tool B: Client-Side Image Compressor -->
+            <div class="rounded-3xl bg-canvas p-6 border border-black/5 flex flex-col justify-between space-y-5">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-editorial font-bold text-xl text-obsidian">Kompresor Gambar</h4>
+                  <span class="font-mono text-[11px] px-2.5 py-1 rounded-full bg-white text-obsidian/70">HTML5 Canvas</span>
+                </div>
+
+                <div onclick="document.getElementById('compFileInput').click()" class="cursor-pointer rounded-2xl border border-dashed border-obsidian/25 hover:border-ember bg-white p-5 text-center transition-colors">
+                  <input type="file" id="compFileInput" accept="image/jpeg,image/png,image/webp" class="hidden" onchange="handleCompressFile(event)" />
+                  <div class="inline-flex items-center gap-2 text-xs font-bold text-obsidian">
+                    <i data-lucide="image" class="w-4 h-4 text-ember"></i>
+                    <span id="compFileName">Pilih Foto (JPG / PNG / WebP)</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex items-center justify-between text-xs font-bold mb-1.5">
+                    <span class="text-obsidian/70">Kualitas Kompresi</span>
+                    <span id="compQualityVal" class="font-mono text-ember">75%</span>
+                  </div>
+                  <input type="range" id="compQualitySlider" min="15" max="95" value="75" oninput="updateCompression()" class="w-full" />
+                </div>
+              </div>
+
+              <!-- Compression Stats & Download -->
+              <div class="bg-white p-4 rounded-2xl border border-black/5 space-y-3">
+                <div class="grid grid-cols-3 gap-2 text-center">
+                  <div class="p-2 rounded-xl bg-canvas">
+                    <div class="text-[10px] uppercase text-obsidian/50 font-bold">Asli</div>
+                    <div id="compOrigSize" class="font-mono text-xs font-bold text-obsidian mt-0.5">—</div>
+                  </div>
+                  <div class="p-2 rounded-xl bg-canvas">
+                    <div class="text-[10px] uppercase text-obsidian/50 font-bold">Hasil</div>
+                    <div id="compNewSize" class="font-mono text-xs font-bold text-ember mt-0.5">—</div>
+                  </div>
+                  <div class="p-2 rounded-xl bg-canvas">
+                    <div class="text-[10px] uppercase text-obsidian/50 font-bold">Hemat</div>
+                    <div id="compSavings" class="font-mono text-xs font-bold text-emerald-600 mt-0.5">—</div>
+                  </div>
+                </div>
+
+                <button type="button" id="btnDownloadCompressed" disabled onclick="downloadCompressedImage()" class="w-full py-2.5 rounded-full bg-obsidian disabled:bg-obsidian/25 hover:bg-ember text-white text-xs font-bold transition-colors inline-flex items-center justify-center gap-2">
+                  <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                  <span>Unduh Hasil Kompresi</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. METRICS STRIP (Studio Stats Row + Orange Starburst)
+    ========================================================== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="rounded-3xl bg-white/75 backdrop-blur-sm border border-black/[0.06] px-6 py-8 sm:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div class="grid grid-cols-3 gap-6 sm:gap-14 w-full md:w-auto">
+          <div>
+            <div class="font-editorial font-bold text-3xl sm:text-4xl text-obsidian">6<span class="text-ember">+</span></div>
+            <div class="text-xs sm:text-sm text-obsidian/60 font-medium mt-1">Fitur Utama</div>
+          </div>
+          <div>
+            <div class="font-editorial font-bold text-3xl sm:text-4xl text-obsidian">100<span class="text-ember">%</span></div>
+            <div class="text-xs sm:text-sm text-obsidian/60 font-medium mt-1">Gratis Tanpa Login</div>
+          </div>
+          <div>
+            <div class="font-editorial font-bold text-3xl sm:text-4xl text-obsidian">0 <span class="text-ember">Rp</span></div>
+            <div class="text-xs sm:text-sm text-obsidian/60 font-medium mt-1">Biaya API</div>
+          </div>
+        </div>
+
+        <!-- Geometric Orange Starburst Ornament (Echoing Studio Reference) -->
+        <div class="hidden md:flex items-center gap-4 text-ember">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" class="animate-spin-slow">
+            <path d="M22 2V42M2 22H42M7.86 7.86L36.14 36.14M36.14 7.86L7.86 36.14" stroke="#FF5500" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. PROCESS SECTION ("Cara Kerja — Simpel & Cepat")
+    ========================================================== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Decorative Dark 3D-Style Ring with Glowing Orange Accent -->
+        <div class="lg:col-span-5 flex items-center justify-center">
+          <div class="relative w-72 h-72 sm:w-80 sm:h-80 flex items-center justify-center">
+            <!-- Outer Ember Glow -->
+            <div class="absolute inset-4 rounded-full bg-ember/25 blur-2xl animate-glow"></div>
+            <!-- 3D Sculpted Torus SVG -->
+            <svg viewBox="0 0 320 320" class="w-full h-full relative z-10 drop-shadow-2xl">
+              <defs>
+                <linearGradient id="obsidianRing" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#3A3A3A" />
+                  <stop offset="45%" stop-color="#121212" />
+                  <stop offset="85%" stop-color="#090909" />
+                  <stop offset="100%" stop-color="#FF5500" />
+                </linearGradient>
+                <linearGradient id="rimHighlight" x1="100%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#FF7733" stop-opacity="0.95" />
+                  <stop offset="50%" stop-color="#FF5500" stop-opacity="0.2" />
+                  <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.15" />
+                </linearGradient>
+              </defs>
+              <g transform="rotate(-28 160 160)">
+                <ellipse cx="160" cy="160" rx="122" ry="78" fill="none" stroke="url(#obsidianRing)" stroke-width="34" />
+                <ellipse cx="160" cy="160" rx="138" ry="94" fill="none" stroke="url(#rimHighlight)" stroke-width="2.5" />
+                <ellipse cx="160" cy="160" rx="105" ry="62" fill="none" stroke="#FF5500" stroke-width="1.5" opacity="0.65" />
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Right Numbered Process Steps -->
+        <div class="lg:col-span-7 space-y-8">
+          <div>
+            <div class="inline-flex items-center gap-3 mb-3">
+              <span class="w-8 h-[2px] bg-ember rounded-full"></span>
+              <span class="text-xs font-bold tracking-[0.2em] uppercase text-obsidian/65">CARA KERJA</span>
+            </div>
+            <h2 class="font-editorial font-bold text-3xl sm:text-5xl text-obsidian leading-[1.08]">
+              Proses Simpel.<br/>
+              Hasil <span class="text-ember">Maksimal.</span>
+            </h2>
+          </div>
+
+          <div class="space-y-5">
+            <!-- Step 01 -->
+            <div class="flex items-start gap-5 p-4 rounded-2xl hover:bg-white/70 transition-colors">
+              <div class="w-11 h-11 rounded-full border border-obsidian/20 bg-white flex items-center justify-center font-mono text-xs font-bold text-obsidian shrink-0">
+                01
+              </div>
+              <div>
+                <h3 class="font-editorial font-bold text-lg text-obsidian">Tempel Link atau Upload File</h3>
+                <p class="text-sm text-obsidian/65 mt-1">Salin tautan video sosial media, shortlink, atau pilih gambar dari galeri perangkat Anda.</p>
+              </div>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="flex items-start gap-5 p-4 rounded-2xl hover:bg-white/70 transition-colors">
+              <div class="w-11 h-11 rounded-full border border-ember bg-ember text-white flex items-center justify-center font-mono text-xs font-bold shrink-0 shadow-ember">
+                02
+              </div>
+              <div>
+                <h3 class="font-editorial font-bold text-lg text-obsidian">Diproses Otomatis via Free API & Browser AI</h3>
+                <p class="text-sm text-obsidian/65 mt-1">Sistem mengekstrak media resolusi tertinggi, membuka redirect link, atau menghapus latar belakang secara instan.</p>
+              </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="flex items-start gap-5 p-4 rounded-2xl hover:bg-white/70 transition-colors">
+              <div class="w-11 h-11 rounded-full border border-obsidian/20 bg-white flex items-center justify-center font-mono text-xs font-bold text-obsidian shrink-0">
+                03
+              </div>
+              <div>
+                <h3 class="font-editorial font-bold text-lg text-obsidian">Unduh Hasil Kualitas Terbaik</h3>
+                <p class="text-sm text-obsidian/65 mt-1">Simpan langsung video MP4 tanpa watermark, audio MP3, atau file PNG transparan ke perangkat Anda.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. BOTTOM DARK ROUNDED CTA BANNER
+    ========================================================== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <div class="relative rounded-[32px] bg-obsidian text-white p-8 sm:p-12 lg:px-14 overflow-hidden flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 shadow-2xl">
+        <!-- Subtle Fiery Orange Horizon Flare -->
+        <div class="pointer-events-none absolute bottom-0 left-1/3 w-96 h-24 bg-ember/35 blur-2xl rounded-full"></div>
+        <div class="pointer-events-none absolute bottom-0 inset-x-12 h-[2px] bg-gradient-to-r from-transparent via-ember to-transparent opacity-80"></div>
+
+        <div class="relative z-10 space-y-2 max-w-2xl">
+          <h2 class="font-editorial font-bold text-2xl sm:text-4xl leading-tight">
+            Ingin Pakai <span class="text-ember">Endpoint API</span> Gratisnya?
+          </h2>
+          <p class="text-sm sm:text-base text-white/65">
+            Lihat daftar lengkap endpoint API publik gratis dan pustaka AI client-side yang menggerakkan seluruh fitur di <strong class="text-white">gktf.id</strong>.
+          </p>
+        </div>
+
+        <div class="relative z-10 shrink-0">
+          <button type="button" onclick="toggleApiModal(true)" class="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-ember hover:bg-[#e04b00] text-white font-bold text-sm shadow-ember transition-all hover:-translate-y-0.5">
+            <span>Lihat Dokumentasi API</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       7. FOOTER
+  ========================================================== -->
+  <footer class="border-t border-black/[0.08] bg-canvas relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-black/[0.06]">
+        <!-- Logo -->
+        <a href="#beranda" class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-obsidian flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M4 6H12V9H7V15H10V12H13V18H4V6Z" fill="#F6F4EF"/>
+              <path d="M14 6H17V11L20.5 6H23.5L19.5 11.8L23.8 18H20.5L17 12.8V18H14V6Z" fill="#FF5500"/>
+            </svg>
+          </div>
+          <span class="font-editorial font-bold text-lg text-obsidian">gktf<span class="text-ember">.id</span></span>
+        </a>
+
+        <!-- Quick Links -->
+        <div class="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm font-medium text-obsidian/70">
+          <a href="#beranda" class="hover:text-ember transition-colors">Beranda</a>
+          <button type="button" onclick="selectWorkspaceTab('downloader', true)" class="hover:text-ember transition-colors">Downloader</button>
+          <button type="button" onclick="selectWorkspaceTab('bypass', true)" class="hover:text-ember transition-colors">Bypass Link</button>
+          <button type="button" onclick="selectWorkspaceTab('removebg', true)" class="hover:text-ember transition-colors">Remove BG</button>
+          <button type="button" onclick="toggleApiModal(true)" class="hover:text-ember transition-colors">Info API</button>
+        </div>
+
+        <!-- Circular Social / Utility Badges -->
+        <div class="flex items-center gap-2.5">
+          <button type="button" onclick="toggleApiModal(true)" title="API Endpoints" class="w-9 h-9 rounded-full border border-obsidian/15 hover:bg-obsidian hover:text-white flex items-center justify-center text-obsidian transition-colors">
+            <i data-lucide="code-2" class="w-4 h-4"></i>
+          </button>
+          <a href="#workspace" title="Workspace" class="w-9 h-9 rounded-full border border-obsidian/15 hover:bg-obsidian hover:text-white flex items-center justify-center text-obsidian transition-colors">
+            <i data-lucide="layers" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-obsidian/55">
+        <p>© 2026 gktf.id. All rights reserved.</p>
+        <p class="font-medium">Cepat <span class="text-ember">•</span> Gratis <span class="text-ember">•</span> Tanpa Batas</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       DEVELOPER FREE API INSPECTOR MODAL
+  ========================================================== -->
+  <div id="apiModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-obsidian/70 backdrop-blur-sm">
+    <div class="bg-canvas border border-black/10 rounded-[32px] max-w-2xl w-full max-h-[88vh] overflow-y-auto p-6 sm:p-8 shadow-2xl space-y-6">
+      <div class="flex items-start justify-between gap-4 border-b border-black/10 pb-4">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-ember">OPEN & CLIENT-SIDE ARCHITECTURE</span>
+          <h3 class="font-editorial font-bold text-2xl text-obsidian mt-1">Daftar API Gratis gktf.id</h3>
+        </div>
+        <button type="button" onclick="toggleApiModal(false)" class="w-9 h-9 rounded-full bg-surface hover:bg-obsidian hover:text-white flex items-center justify-center text-obsidian transition-colors">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3.5 text-sm">
+        <!-- API Item 1 -->
+        <div class="p-4 rounded-2xl bg-white border border-black/5 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-obsidian">1. TikWM Public Media API (TikTok No-WM & MP3)</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-mono text-[11px] font-bold">GET / POST</span>
+          </div>
+          <div class="flex items-center justify-between gap-2 bg-canvas px-3 py-2 rounded-xl font-mono text-xs text-obsidian/80 overflow-x-auto">
+            <code>https://www.tikwm.com/api/?url={VIDEO_URL}&hd=1</code>
+            <button type="button" onclick="copyTextToClipboard('https://www.tikwm.com/api/?url={VIDEO_URL}&hd=1')" class="text-ember hover:underline shrink-0 font-sans font-bold">Salin</button>
+          </div>
+        </div>
+
+        <!-- API Item 2 -->
+        <div class="p-4 rounded-2xl bg-white border border-black/5 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-obsidian">2. Unshorten.me JSON Redirect Resolver</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-mono text-[11px] font-bold">GET</span>
+          </div>
+          <div class="flex items-center justify-between gap-2 bg-canvas px-3 py-2 rounded-xl font-mono text-xs text-obsidian/80 overflow-x-auto">
+            <code>https://unshorten.me/json/{SHORT_URL}</code>
+            <button type="button" onclick="copyTextToClipboard('https://unshorten.me/json/{SHORT_URL}')" class="text-ember hover:underline shrink-0 font-sans font-bold">Salin</button>
+          </div>
+        </div>
+
+        <!-- API Item 3 -->
+        <div class="p-4 rounded-2xl bg-white border border-black/5 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-obsidian">3. AI Background Removal (Client-Side WASM)</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-orange-100 text-ember font-mono text-[11px] font-bold">ESM CDN</span>
+          </div>
+          <div class="flex items-center justify-between gap-2 bg-canvas px-3 py-2 rounded-xl font-mono text-xs text-obsidian/80 overflow-x-auto">
+            <code>https://esm.sh/@imgly/background-removal@1.4.5</code>
+            <button type="button" onclick="copyTextToClipboard('https://esm.sh/@imgly/background-removal@1.4.5')" class="text-ember hover:underline shrink-0 font-sans font-bold">Salin</button>
+          </div>
+        </div>
+
+        <!-- API Item 4 -->
+        <div class="p-4 rounded-2xl bg-white border border-black/5 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-obsidian">4. GoQR Public QR Code Generator API</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-mono text-[11px] font-bold">GET PNG</span>
+          </div>
+          <div class="flex items-center justify-between gap-2 bg-canvas px-3 py-2 rounded-xl font-mono text-xs text-obsidian/80 overflow-x-auto">
+            <code>https://api.qrserver.com/v1/create-qr-code/?size=400x400&data={TEXT}</code>
+            <button type="button" onclick="copyTextToClipboard('https://api.qrserver.com/v1/create-qr-code/?size=400x400&data={TEXT}')" class="text-ember hover:underline shrink-0 font-sans font-bold">Salin</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-end pt-2">
+        <button type="button" onclick="toggleApiModal(false)" class="px-6 py-2.5 rounded-full bg-obsidian text-white text-xs font-bold hover:bg-ember transition-colors">
+          Tutup Panel
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Non-Blocking Toast Notification -->
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- =========================================================
+       APPLICATION JAVASCRIPT LOGIC
+  ========================================================== -->
+  <script>
+    // Initialize Lucide Icons on Load
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    });
+
+    /* -----------------------------------------------------------
+       UI HELPERS: TOAST, CLIPBOARD, NAVIGATION & TABS
+    ------------------------------------------------------------ */
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      const accentClass = type === 'error'
+        ? 'border-red-500 bg-obsidian text-white'
+        : type === 'success'
+          ? 'border-emerald-500 bg-obsidian text-white'
+          : 'border-ember bg-obsidian text-white';
+
+      toast.className = `pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-2xl border-l-4 shadow-xl text-xs sm:text-sm font-medium transition-all duration-300 translate-y-2 opacity-0 ${accentClass}`;
+      toast.innerHTML = `
+        <span class="w-2 h-2 rounded-full ${type === 'error' ? 'bg-red-400' : type === 'success' ? 'bg-emerald-400' : 'bg-ember'}"></span>
+        <span>${message}</span>
+      `;
+      container.appendChild(toast);
+
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-2', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-2', 'opacity-0');
+        setTimeout(() => toast.remove(), 300);
+      }, 3400);
+    }
+
+    function copyTextToClipboard(text) {
+      if (!text) return;
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        showToast('Teks berhasil disalin ke clipboard!', 'success');
+      } catch (err) {
+        showToast('Gagal menyalin otomatis. Silakan salin manual.', 'error');
+      }
+      document.body.removeChild(textarea);
+    }
+
+    async function pasteFromClipboard(inputId, callback) {
+      const input = document.getElementById(inputId);
+      try {
+        if (navigator.clipboard && navigator.clipboard.readText) {
+          const text = await navigator.clipboard.readText();
+          if (text) {
+            input.value = text.trim();
+            if (callback) callback();
+            showToast('Tautan ditempel dari clipboard.', 'success');
+            return;
+          }
+        }
+        input.focus();
+        showToast('Tekan Ctrl+V / Tempel pada kolom input.', 'info');
+      } catch (e) {
+        input.focus();
+        showToast('Izin clipboard dibatasi browser. Silakan tempel manual.', 'info');
+      }
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    function toggleApiModal(show) {
+      const modal = document.getElementById('apiModal');
+      if (show) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function selectWorkspaceTab(tabName, shouldScroll = false) {
+      // Update Selector Cards
+      const tabs = ['downloader', 'bypass', 'removebg', 'other'];
+      tabs.forEach((t) => {
+        const card = document.getElementById(`card-${t}`);
+        const panel = document.getElementById(`panel-${t}`);
+        if (t === tabName) {
+          card.classList.add('active-card');
+          panel.classList.remove('hidden');
+        } else {
+          card.classList.remove('active-card');
+          panel.classList.add('hidden');
+        }
+      });
+
+      if (shouldScroll) {
+        document.getElementById('workspace').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    /* -----------------------------------------------------------
+       TAB 1: VIDEO & MP3 DOWNLOADER (TikWM & Public Resolvers)
+    ------------------------------------------------------------ */
+    let selectedMediaFormat = 'mp4';
+
+    function setMediaFormat(fmt) {
+      selectedMediaFormat = fmt;
+      const btnMp4 = document.getElementById('fmt-mp4');
+      const btnMp3 = document.getElementById('fmt-mp3');
+      if (fmt === 'mp4') {
+        btnMp4.className = 'px-4 py-2 rounded-full bg-obsidian text-white text-xs font-bold transition-all inline-flex items-center gap-1.5';
+        btnMp3.className = 'px-4 py-2 rounded-full text-obsidian/70 hover:text-obsidian text-xs font-bold transition-all inline-flex items-center gap-1.5';
+      } else {
+        btnMp3.className = 'px-4 py-2 rounded-full bg-obsidian text-white text-xs font-bold transition-all inline-flex items-center gap-1.5';
+        btnMp4.className = 'px-4 py-2 rounded-full text-obsidian/70 hover:text-obsidian text-xs font-bold transition-all inline-flex items-center gap-1.5';
+      }
+    }
+
+    function detectMediaPlatform(url) {
+      const badge = document.getElementById('platformBadge');
+      const lower = (url || '').toLowerCase();
+      let label = 'Auto-Deteksi: TT / YT / FB / IG';
+      let color = 'text-ember';
+
+      if (lower.includes('tiktok.com')) {
+        label = 'Platform: TikTok (No Watermark API)';
+      } else if (lower.includes('youtube.com') || lower.includes('youtu.be')) {
+        label = 'Platform: YouTube (Video & MP3)';
+      } else if (lower.includes('instagram.com')) {
+        label = 'Platform: Instagram Reels / Post';
+      } else if (lower.includes('facebook.com') || lower.includes('fb.watch')) {
+        label = 'Platform: Facebook Video';
+      }
+
+      badge.innerHTML = `<i data-lucide="radio" class="w-3.5 h-3.5 ${color}"></i><span>${label}</span>`;
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function fillSampleMedia(platform) {
+      const input = document.getElementById('mediaUrlInput');
+      if (platform === 'tiktok') {
+        input.value = 'https://www.tiktok.com/@tiktok/video/7106594312292453675';
+      } else {
+        input.value = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+      }
+      detectMediaPlatform(input.value);
+      showToast('Contoh tautan dimasukkan. Klik "Proses Link".', 'info');
+    }
+
+    async function handleMediaDownload() {
+      const rawUrl = document.getElementById('mediaUrlInput').value.trim();
+      const resultArea = document.getElementById('mediaResultArea');
+      const btn = document.getElementById('btnDownloadMedia');
+
+      if (!rawUrl || !rawUrl.startsWith('http')) {
+        showToast('Masukkan tautan URL video yang valid (https://...).', 'error');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = `<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i><span>Memproses...</span>`;
+      if (window.lucide) lucide.createIcons();
+
+      resultArea.classList.remove('hidden');
+      resultArea.innerHTML = `
+        <div class="p-6 rounded-2xl bg-canvas border border-black/5 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-ember/15 text-ember flex items-center justify-center shrink-0">
+            <i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i>
+          </div>
+          <div>
+            <div class="font-bold text-sm text-obsidian">Menghubungi Server API Publik Gratis...</div>
+            <div class="text-xs text-obsidian/60">Mengekstrak metadata dan tautan unduhan kualitas terbaik.</div>
+          </div>
+        </div>
+      `;
+      if (window.lucide) lucide.createIcons();
+
+      try {
+        const lower = rawUrl.toLowerCase();
+
+        // 1. Real TikWM API Integration for TikTok URLs
+        if (lower.includes('tiktok.com')) {
+          const apiUrl = `https://www.tikwm.com/api/?url=${encodeURIComponent(rawUrl)}&hd=1`;
+          const response = await fetch(apiUrl);
+          const json = await response.json();
+
+          if (json && json.code === 0 && json.data) {
+            const d = json.data;
+            const title = d.title || 'Video TikTok Tanpa Watermark';
+            const author = d.author?.nickname || d.author?.unique_id || 'Kreator TikTok';
+            const cover = d.cover || 'https://placehold.co/320x480/121212/FF5500?text=TikTok+Media';
+            const hdVideo = d.hdplay || d.play;
+            const sdVideo = d.play;
+            const mp3Url = d.music;
+
+            resultArea.innerHTML = `
+              <div class="rounded-3xl bg-canvas p-5 sm:p-6 border border-black/10 flex flex-col md:flex-row gap-6 items-center">
+                <img src="${cover}" onerror="this.src='https://placehold.co/320x480/121212/FF5500?text=Preview'" alt="Thumbnail" class="w-36 h-48 object-cover rounded-2xl shadow-md shrink-0 bg-obsidian" />
+                <div class="flex-1 space-y-4 w-full">
+                  <div>
+                    <span class="inline-block px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold mb-2">Berhasil Diekstrak • TikWM API</span>
+                    <h4 class="font-editorial font-bold text-lg text-obsidian line-clamp-2">${escapeHtml(title)}</h4>
+                    <p class="text-xs text-obsidian/60 mt-1">Oleh: <strong>${escapeHtml(author)}</strong> • Durasi: ${d.duration || 0} detik</p>
+                  </div>
+                  <div class="flex flex-wrap gap-3">
+                    ${hdVideo ? `
+                      <a href="${hdVideo}" target="_blank" rel="noopener noreferrer" download="gktf-tiktok-hd.mp4" class="px-5 py-3 rounded-full bg-ember hover:bg-[#e04b00] text-white text-xs font-bold shadow-ember transition-all inline-flex items-center gap-2">
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        <span>Unduh MP4 HD (No WM)</span>
+                      </a>
+                    ` : ''}
+                    ${sdVideo && sdVideo !== hdVideo ? `
+                      <a href="${sdVideo}" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-full bg-obsidian hover:bg-obsidian/85 text-white text-xs font-bold transition-all inline-flex items-center gap-2">
+                        <i data-lucide="video" class="w-4 h-4"></i>
+                        <span>MP4 Standar</span>
+                      </a>
+                    ` : ''}
+                    ${mp3Url ? `
+                      <a href="${mp3Url}" target="_blank" rel="noopener noreferrer" download="gktf-audio.mp3" class="px-5 py-3 rounded-full bg-white hover:bg-obsidian hover:text-white border border-obsidian/15 text-obsidian text-xs font-bold transition-all inline-flex items-center gap-2">
+                        <i data-lucide="music" class="w-4 h-4 text-ember"></i>
+                        <span>Unduh Audio MP3</span>
+                      </a>
+                    ` : ''}
+                  </div>
+                </div>
+              </div>
+            `;
+            showToast('Video & Audio TikTok berhasil diekstrak!', 'success');
+          } else {
+            throw new Error('Video TikTok bersifat privat atau tautan tidak ditemukan.');
+          }
+        } else {
+          // 2. YouTube / Facebook / Instagram / Multi-Platform Public Metadata + Resolver
+          let metaTitle = 'Media Sosial Siap Diunduh';
+          let thumbUrl = 'https://placehold.co/480x270/121212/FF5500?text=gktf.id+Media';
+
+          // Fetch public NoEmbed metadata (supports CORS for YT/IG/FB/Vimeo)
+          try {
+            const noembedRes = await fetch(`https://noembed.com/embed?url=${encodeURIComponent(rawUrl)}`);
+            const noembedData = await noembedRes.json();
+            if (noembedData && noembedData.title) {
+              metaTitle = noembedData.title;
+              if (noembedData.thumbnail_url) thumbUrl = noembedData.thumbnail_url;
+            }
+          } catch (_) {
+            // Fallback silently if metadata endpoint is unreachable
+          }
+
+          // Attempt public Cobalt API endpoint
+          let directStreamUrl = null;
+          try {
+            const cobaltRes = await fetch('https://api.cobalt.tools/', {
+              method: 'POST',
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                url: rawUrl,
+                downloadMode: selectedMediaFormat === 'mp3' ? 'audio' : 'auto',
+                videoQuality: '1080'
+              })
+            });
+            if (cobaltRes.ok) {
+              const cobaltJson = await cobaltRes.json();
+              if (cobaltJson && cobaltJson.url) {
+                directStreamUrl = cobaltJson.url;
+              }
+            }
+          } catch (_) {
+            // Public Cobalt instances may require Turnstile/CORS; provide clean multi-mirror fallback
+          }
+
+          const encodedUrl = encodeURIComponent(rawUrl);
+          resultArea.innerHTML = `
+            <div class="rounded-3xl bg-canvas p-5 sm:p-6 border border-black/10 flex flex-col md:flex-row gap-6 items-center">
+              <img src="${thumbUrl}" onerror="this.src='https://placehold.co/480x270/121212/FF5500?text=Media+Preview'" alt="Media Thumbnail" class="w-full md:w-52 h-32 object-cover rounded-2xl shadow-sm bg-obsidian shrink-0" />
+              <div class="flex-1 space-y-4 w-full">
+                <div>
+                  <span class="inline-block px-2.5 py-1 rounded-full bg-ember/15 text-ember text-[11px] font-bold mb-1.5">
+                    Format Dipilih: ${selectedMediaFormat.toUpperCase()}
+                  </span>
+                  <h4 class="font-editorial font-bold text-lg text-obsidian line-clamp-2">${escapeHtml(metaTitle)}</h4>
+                  <p class="text-xs text-obsidian/60 mt-1 break-all">${escapeHtml(rawUrl)}</p>
+                </div>
+
+                <div class="flex flex-wrap gap-3">
+                  ${directStreamUrl ? `
+                    <a href="${directStreamUrl}" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-full bg-ember hover:bg-[#e04b00] text-white text-xs font-bold shadow-ember transition-all inline-flex items-center gap-2">
+                      <i data-lucide="download" class="w-4 h-4"></i>
+                      <span>Unduh ${selectedMediaFormat.toUpperCase()} Langsung</span>
+                    </a>
+                  ` : `
+                    <a href="https://cobalt.tools/#u=${encodedUrl}" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-full bg-ember hover:bg-[#e04b00] text-white text-xs font-bold shadow-ember transition-all inline-flex items-center gap-2">
+                      <i data-lucide="external-link" class="w-4 h-4"></i>
+                      <span>Unduh via Cobalt Resolver (${selectedMediaFormat.toUpperCase()})</span>
+                    </a>
+                    <a href="https://ssyoutube.com/watch?v=${extractYtId(rawUrl)}" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-full bg-obsidian hover:bg-obsidian/85 text-white text-xs font-bold transition-all inline-flex items-center gap-2">
+                      <i data-lucide="server" class="w-4 h-4 text-ember"></i>
+                      <span>Mirror Server 2</span>
+                    </a>
+                  `}
+                </div>
+              </div>
+            </div>
+          `;
+          showToast('Tautan media siap diunduh!', 'success');
+        }
+      } catch (err) {
+        resultArea.innerHTML = `
+          <div class="p-5 rounded-2xl bg-red-50 border border-red-200 text-xs sm:text-sm text-red-800 flex items-start gap-3">
+            <i data-lucide="alert-circle" class="w-5 h-5 text-red-600 shrink-0 mt-0.5"></i>
+            <div>
+              <div class="font-bold">Gagal memproses tautan secara langsung</div>
+              <p class="mt-1 opacity-85">${escapeHtml(err.message || 'Pastikan tautan video bersifat publik dan coba lagi.')}</p>
+            </div>
+          </div>
+        `;
+        showToast('Gagal memproses tautan video.', 'error');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<i data-lucide="download" class="w-5 h-5"></i><span>Proses Link</span>`;
+        if (window.lucide) lucide.createIcons();
+      }
+    }
+
+    function extractYtId(url) {
+      const match = url.match(/(?:v=|\/)([0-9A-Za-z_-]{11})/);
+      return match ? match[1] : '';
+    }
+
+    /* -----------------------------------------------------------
+       TAB 2: BYPASS & UNSHORTEN LINK
+    ------------------------------------------------------------ */
+    function fillSampleBypass(sampleUrl) {
+      document.getElementById('bypassUrlInput').value = sampleUrl;
+      showToast('Contoh shortlink diisi. Klik "Buka Tujuan Asli".', 'info');
+    }
+
+    async function handleBypassLink() {
+      const inputUrl = document.getElementById('bypassUrlInput').value.trim();
+      const resultArea = document.getElementById('bypassResultArea');
+      const btn = document.getElementById('btnBypassLink');
+
+      if (!inputUrl || !inputUrl.startsWith('http')) {
+        showToast('Masukkan shortlink atau URL safelink yang valid.', 'error');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = `<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i><span>Melacak...</span>`;
+      if (window.lucide) lucide.createIcons();
+
+      resultArea.classList.remove('hidden');
+      resultArea.innerHTML = `
+        <div class="p-5 rounded-2xl bg-canvas border border-black/5 flex items-center gap-3 text-sm">
+          <i data-lucide="loader-2" class="w-5 h-5 text-ember animate-spin"></i>
+          <span>Memeriksa parameter safelink & rantai redirect URL...</span>
+        </div>
+      `;
+      if (window.lucide) lucide.createIcons();
+
+      try {
+        let resolvedUrl = null;
+        let methodUsed = 'Unshorten.me Public API';
+
+        // Step A: Check for embedded Safelink query parameters (?url=, ?target=, ?go=, ?u=, ?r=)
+        try {
+          const parsed = new URL(inputUrl);
+          const candidateKeys = ['url', 'target', 'go', 'u', 'r', 'dest', 'destination', 'link'];
+          for (const key of candidateKeys) {
+            const val = parsed.searchParams.get(key);
+            if (val) {
+              if (val.startsWith('http://') || val.startsWith('https://')) {
+                resolvedUrl = decodeURIComponent(val);
+                methodUsed = `Safelink Parameter Decoder (?${key}=)`;
+                break;
+              }
+              // Check Base64 encoded URL inside parameter
+              try {
+                const decodedB64 = atob(val);
+                if (decodedB64.startsWith('http://') || decodedB64.startsWith('https://')) {
+                  resolvedUrl = decodedB64;
+                  methodUsed = `Base64 Safelink Decoder (?${key}=)`;
+                  break;
+                }
+              } catch (_) {}
+            }
+          }
+        } catch (_) {}
+
+        // Step B: Query Unshorten.me Public JSON API if not already resolved via safelink parameter
+        if (!resolvedUrl) {
+          const cleanForApi = inputUrl.replace(/^https?:\/\//i, '');
+          const res = await fetch(`https://unshorten.me/json/${encodeURIComponent(cleanForApi)}`);
+          if (res.ok) {
+            const data = await res.json();
+            if (data && data.resolved_url) {
+              resolvedUrl = data.resolved_url;
+              methodUsed = 'Unshorten.me JSON API';
+            }
+          }
+        }
+
+        // Step C: Fallback via AllOrigins redirect header inspection
+        if (!resolvedUrl) {
+          const proxyRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(inputUrl)}`);
+          if (proxyRes.ok) {
+            const proxyData = await proxyRes.json();
+            if (proxyData && proxyData.status && proxyData.status.url) {
+              resolvedUrl = proxyData.status.url;
+              methodUsed = 'HTTP Redirect Inspector';
+            }
+          }
+        }
+
+        if (!resolvedUrl) {
+          resolvedUrl = inputUrl;
+          methodUsed = 'Direct URL (Tidak ada redirect terdeteksi)';
+        }
+
+        const isHttps = resolvedUrl.startsWith('https://');
+        const targetHost = new URL(resolvedUrl).hostname;
+
+        resultArea.innerHTML = `
+          <div class="rounded-3xl bg-canvas p-6 border border-black/10 space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+                <span>Tujuan Asli Ditemukan</span>
+              </span>
+              <span class="font-mono text-[11px] text-obsidian/60">Metode: ${escapeHtml(methodUsed)}</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-black/10 space-y-2">
+              <div class="text-[11px] font-bold uppercase tracking-wider text-obsidian/50">URL Tujuan Akhir (${escapeHtml(targetHost)})</div>
+              <div class="font-mono text-xs sm:text-sm text-obsidian break-all font-semibold select-all">${escapeHtml(resolvedUrl)}</div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-1">
+              <div class="flex items-center gap-2 text-xs font-semibold ${isHttps ? 'text-emerald-700' : 'text-amber-700'}">
+                <i data-lucide="${isHttps ? 'lock' : 'alert-triangle'}" class="w-4 h-4"></i>
+                <span>${isHttps ? 'Koneksi Terenkripsi (HTTPS)' : 'Peringatan: Koneksi HTTP Non-SSL'}</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <button type="button" onclick="copyTextToClipboard('${resolvedUrl.replace(/'/g, "\\'")}')" class="px-5 py-2.5 rounded-full bg-white hover:bg-obsidian hover:text-white border border-obsidian/15 text-xs font-bold text-obsidian transition-colors inline-flex items-center gap-2">
+                  <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                  <span>Salin URL</span>
+                </button>
+                <a href="${resolvedUrl}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-ember hover:bg-[#e04b00] text-white text-xs font-bold shadow-ember transition-all inline-flex items-center gap-2">
+                  <span>Kunjungi Link</span>
+                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+        showToast('Berhasil membuka tujuan asli tautan!', 'success');
+      } catch (err) {
+        resultArea.innerHTML = `
+          <div class="p-4 rounded-2xl bg-red-50 border border-red-200 text-xs text-red-800">
+            Gagal melacak tautan tersebut. Pastikan format URL benar dan dapat diakses secara publik.
+          </div>
+        `;
+        showToast('Gagal melacak shortlink.', 'error');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<i data-lucide="zap" class="w-5 h-5 text-ember"></i><span>Buka Tujuan Asli</span>`;
+        if (window.lucide) lucide.createIcons();
+      }
+    }
+
+    /* -----------------------------------------------------------
+       TAB 3: AI REMOVE BACKGROUND (Browser ESM WASM + Canvas Fallback)
+    ------------------------------------------------------------ */
+    let removedBgBlobUrl = null;
+
+    function handleBgDrop(event) {
+      event.preventDefault();
+      event.currentTarget.classList.remove('border-ember', 'bg-ember/5');
+      const file = event.dataTransfer?.files?.[0];
+      if (file) processRemoveBackground(file);
+    }
+
+    function handleBgFileSelect(event) {
+      const file = event.target?.files?.[0];
+      if (file) processRemoveBackground(file);
+    }
+
+    // Generates a clean sample portrait/product graphic on canvas so user can test 1-click
+    function generateSampleSubjectImage() {
+      const canvas = document.createElement('canvas');
+      canvas.width = 500;
+      canvas.height = 500;
+      const ctx = canvas.getContext('2d');
+
+      // Solid studio backdrop
+      ctx.fillStyle = '#3B82F6';
+      ctx.fillRect(0, 0, 500, 500);
+
+      // Draw central stylized product/avatar silhouette
+      ctx.fillStyle = '#121212';
+      ctx.beginPath();
+      ctx.arc(250, 185, 72, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = '#FF5500';
+      ctx.beginPath();
+      ctx.roundRect(135, 275, 230, 165, 50);
+      ctx.fill();
+
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = 'bold 24px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('GKTF.ID', 250, 365);
+
+      canvas.toBlob((blob) => {
+        if (blob) {
+          const sampleFile = new File([blob], 'sample-studio.png', { type: 'image/png' });
+          processRemoveBackground(sampleFile);
+        }
+      }, 'image/png');
+    }
+
+    async function processRemoveBackground(file) {
+      if (!file.type.startsWith('image/')) {
+        showToast('Harap pilih file gambar (PNG, JPG, WebP).', 'error');
+        return;
+      }
+
+      const progressBox = document.getElementById('bgProgressBox');
+      const progressLabel = document.getElementById('bgProgressLabel');
+      const progressPercent = document.getElementById('bgProgressPercent');
+      const progressBar = document.getElementById('bgProgressBar');
+      const resultBox = document.getElementById('bgWorkspaceResult');
+
+      // Display Original Image Preview
+      const origUrl = URL.createObjectURL(file);
+      const origImg = document.getElementById('bgOriginalPreview');
+      origImg.src = origUrl;
+      origImg.onload = () => {
+        document.getElementById('bgOrigDims').textContent = `${origImg.naturalWidth} × ${origImg.naturalHeight} px`;
+      };
+
+      progressBox.classList.remove('hidden');
+      resultBox.classList.add('hidden');
+      updateBgProgress('Memuat model AI segmentasi di browser...', 30);
+
+      try {
+        // Attempt real neural background removal via @imgly/background-removal ESM CDN
+        const imglyModule = await import('https://esm.sh/@imgly/background-removal@1.4.5');
+        const removeBackground = imglyModule.removeBackground || imglyModule.default;
+
+        updateBgProgress('Memisahkan subjek utama dari latar belakang...', 65);
+        const resultBlob = await removeBackground(file, {
+          progress: (key, current, total) => {
+            if (total > 0) {
+              const pct = Math.min(95, Math.max(35, Math.round((current / total) * 100)));
+              updateBgProgress('Memproses neural mask...', pct);
+            }
+          }
+        });
+
+        finishRemoveBg(resultBlob);
+        showToast('Background berhasil dihapus oleh AI!', 'success');
+      } catch (aiErr) {
+        // Smart Canvas Corner-Floodfill / Color-Key Fallback if offline/WASM blocked
+        updateBgProgress('Menjalankan algoritma Smart Canvas Fallback...', 80);
+        const fallbackBlob = await smartCanvasRemoveBg(origUrl);
+        finishRemoveBg(fallbackBlob);
+        showToast('Background berhasil diproses (Mode Cepat Canvas).', 'success');
+      }
+    }
+
+    function updateBgProgress(text, percent) {
+      document.getElementById('bgProgressLabel').innerHTML = `
+        <i data-lucide="loader-2" class="w-4 h-4 text-ember animate-spin"></i>
+        <span>${text}</span>
+      `;
+      document.getElementById('bgProgressPercent').textContent = `${percent}%`;
+      document.getElementById('bgProgressBar').style.width = `${percent}%`;
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function finishRemoveBg(blob) {
+      if (removedBgBlobUrl) URL.revokeObjectURL(removedBgBlobUrl);
+      removedBgBlobUrl = URL.createObjectURL(blob);
+
+      document.getElementById('bgResultPreview').src = removedBgBlobUrl;
+      document.getElementById('bgProgressBox').classList.add('hidden');
+      document.getElementById('bgWorkspaceResult').classList.remove('hidden');
+    }
+
+    // Client-side Canvas Corner-Sampled Color Distance Removal Fallback
+    function smartCanvasRemoveBg(imageSrc) {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          canvas.width = img.width;
+          canvas.height = img.height;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0);
+
+          const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          const data = imgData.data;
+
+          // Sample top-left pixel as background color reference
+          const bgR = data[0];
+          const bgG = data[1];
+          const bgB = data[2];
+          const tolerance = 58;
+
+          for (let i = 0; i < data.length; i += 4) {
+            const diff = Math.sqrt(
+              Math.pow(data[i] - bgR, 2) +
+              Math.pow(data[i + 1] - bgG, 2) +
+              Math.pow(data[i + 2] - bgB, 2)
+            );
+            if (diff < tolerance) {
+              data[i + 3] = 0;
+            } else if (diff < tolerance + 18) {
+              data[i + 3] = Math.round(((diff - tolerance) / 18) * 255);
+            }
+          }
+
+          ctx.putImageData(imgData, 0, 0);
+          canvas.toBlob((blob) => resolve(blob), 'image/png');
+        };
+        img.src = imageSrc;
+      });
+    }
+
+    function setBgPreviewColor(color) {
+      const box = document.getElementById('bgOutputBackdrop');
+      if (color === 'transparent') {
+        box.classList.add('checkerboard');
+        box.style.backgroundColor = '';
+      } else {
+        box.classList.remove('checkerboard');
+        box.style.backgroundColor = color;
+      }
+    }
+
+    function downloadRemovedBgImage() {
+      if (!removedBgBlobUrl) return;
+      const a = document.createElement('a');
+      a.href = removedBgBlobUrl;
+      a.download = `gktf-nobg-${Date.now()}.png`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showToast('Gambar PNG transparan diunduh!', 'success');
+    }
+
+    /* -----------------------------------------------------------
+       TAB 4A: QR CODE GENERATOR (api.qrserver.com)
+    ------------------------------------------------------------ */
+    function updateQrPreview() {
+      const text = document.getElementById('qrTextInput').value.trim() || 'https://gktf.id';
+      const color = document.getElementById('qrColorSelect').value;
+      const size = document.getElementById('qrSizeSelect').value;
+      const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${size}&color=${color}&margin=12&data=${encodeURIComponent(text)}`;
+      document.getElementById('qrPreviewImg').src = apiUrl;
+    }
+
+    async function downloadQrPng() {
+      const imgUrl = document.getElementById('qrPreviewImg').src;
+      try {
+        const res = await fetch(imgUrl);
+        const blob = await res.blob();
+        const blobUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = blobUrl;
+        a.download = `gktf-qrcode-${Date.now()}.png`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(blobUrl);
+        showToast('QR Code PNG berhasil diunduh!', 'success');
+      } catch (_) {
+        window.open(imgUrl, '_blank');
+      }
+    }
+
+    /* -----------------------------------------------------------
+       TAB 4B: CLIENT-SIDE IMAGE COMPRESSOR (HTML5 Canvas)
+    ------------------------------------------------------------ */
+    let currentCompressFile = null;
+    let compressedBlobUrl = null;
+
+    function handleCompressFile(event) {
+      const file = event.target?.files?.[0];
+      if (!file) return;
+      currentCompressFile = file;
+      document.getElementById('compFileName').textContent = file.name;
+      document.getElementById('compOrigSize').textContent = formatBytes(file.size);
+      updateCompression();
+    }
+
+    function updateCompression() {
+      const qualityPct = parseInt(document.getElementById('compQualitySlider').value, 10);
+      document.getElementById('compQualityVal').textContent = `${qualityPct}%`;
+
+      if (!currentCompressFile) return;
+
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          // Cap max dimension at 1920px for crisp web optimization
+          const maxDim = 1920;
+          let w = img.width;
+          let h = img.height;
+          if (w > maxDim || h > maxDim) {
+            if (w > h) {
+              h = Math.round((h * maxDim) / w);
+              w = maxDim;
+            } else {
+              w = Math.round((w * maxDim) / h);
+              h = maxDim;
+            }
+          }
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, w, h);
+
+          canvas.toBlob((blob) => {
+            if (!blob) return;
+            if (compressedBlobUrl) URL.revokeObjectURL(compressedBlobUrl);
+            compressedBlobUrl = URL.createObjectURL(blob);
+
+            document.getElementById('compNewSize').textContent = formatBytes(blob.size);
+            const savedPct = Math.max(0, Math.round(((currentCompressFile.size - blob.size) / currentCompressFile.size) * 100));
+            document.getElementById('compSavings').textContent = `-${savedPct}%`;
+            document.getElementById('btnDownloadCompressed').disabled = false;
+          }, 'image/jpeg', qualityPct / 100);
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(currentCompressFile);
+    }
+
+    function downloadCompressedImage() {
+      if (!compressedBlobUrl) return;
+      const a = document.createElement('a');
+      a.href = compressedBlobUrl;
+      a.download = `gktf-compressed-${Date.now()}.jpg`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showToast('Foto hasil kompresi berhasil diunduh!', 'success');
+    }
+
+    function formatBytes(bytes) {
+      if (bytes === 0) return '0 B';
+      const k = 1024;
+      const sizes = ['B', 'KB', 'MB', 'GB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+  </script>
+</body>
+</html>
